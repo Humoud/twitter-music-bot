@@ -1,3 +1,3 @@
 class Tweet < ActiveRecord::Base
-  has_many :users
+  has_one :user
 end

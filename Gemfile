@@ -15,3 +15,5 @@ gem 'twitter'
 
 # to decode tweet text if they contain HTML entities
 gem 'htmlentities', '~> 4.3', '>= 4.3.4'
+
+gem 'tweetstream'
