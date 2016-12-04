@@ -9,3 +9,9 @@ gem 'sqlite3', '~> 1.3.11'
 # Debugging
 gem 'pry'
 gem 'pry-byebug'
+
+
+gem 'twitter'
+
+# to decode tweet text if they contain HTML entities
+gem 'htmlentities', '~> 4.3', '>= 4.3.4'
