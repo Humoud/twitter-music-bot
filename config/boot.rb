@@ -24,6 +24,9 @@ Nrb.config.autoload_paths.each do |dir|
   Dir[File.join(dir, '*.rb')].each { |f| require(f) }
 end
 
+#################################################
+#### TODO: add to YML file
+## Twitter Handle and Creds
 # @RobotPawn
 # DeveloperAccount1!
 

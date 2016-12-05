@@ -18,6 +18,10 @@ class Bot < ActiveRecord::Base
     t.save
   end
 
+  def self.reply_to_mention(handle, msg, tweet_id)
+    CLIENT.update("@#{handle} #{msg}", in_reply_to_status_id: tweet_id)
+  end
+
   # def self.search_twitter_for_words(words)
   #   CLIENT.search(words, lang: "en").first.text
   # end
