@@ -148,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   htmlentities (~> 4.3, >= 4.3.4)
+  nokogiri
   nrb (= 1.2.0)
   pry
   pry-byebug

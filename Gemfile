@@ -23,3 +23,5 @@ gem 'htmlentities', '~> 4.3', '>= 4.3.4'
 # requires no additional infrastructure requirement (ie. database, redis)
 # https://github.com/brandonhilkert/sucker_punch
 gem 'sucker_punch', '~> 2.0'
+
+gem 'nokogiri'

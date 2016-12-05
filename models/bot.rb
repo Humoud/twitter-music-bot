@@ -3,6 +3,8 @@
 #
 # User(id: integer, handle: string, twitter_user_id: integer, tweet_id: integer)
 
+require 'uri'
+require 'net/http'
 
 class Bot < ActiveRecord::Base
 
@@ -22,6 +24,25 @@ class Bot < ActiveRecord::Base
     CLIENT.update("@#{handle} #{msg}", in_reply_to_status_id: tweet_id)
   end
 
+  def get_lyrics_via_artist_and_song_name(tweet)
+    tweet_txt = tweet.text
+    tweet_txt.sub!("#{BOT_HANDLER} ", "")
+
+    artist_txt = 
+    song_txt =
+
+    url_str = "http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect?"
+    url = URI("#{url_str}artist=brand%20new&song=jesus%20christ")
+
+    http = Net::HTTP.new(url.host, url.port)
+
+    request = Net::HTTP::Get.new(url)
+
+    response = http.request(request)
+
+    # TODO parse to XML
+    puts response.read_body
+  end
   # def self.search_twitter_for_words(words)
   #   CLIENT.search(words, lang: "en").first.text
   # end
