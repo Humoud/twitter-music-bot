@@ -20,10 +20,16 @@ class ReplyToMentionJob
     response_hash = Hash.from_xml(doc.to_s)
 
     puts "====\n\nHash: #{response_hash["GetLyricResult"]}\n\n====\n\n"
-    lyrics = response_hash["GetLyricResult"]["Lyric"][0..120]
+
     if response_hash["GetLyricResult"]["Lyric"].blank?
       CLIENT.update("@#{tweet.user.screen_name} Sorry :(\ncouldn't find the lyrics", in_reply_to_status_id: tweet.id)
     else
+      lyrics = nil
+      if response_hash["GetLyricResult"]["Lyric"].length > 120
+        lyrics = response_hash["GetLyricResult"]["Lyric"][0..120]
+      else
+        lyrics = response_hash["GetLyricResult"]["Lyric"]
+      end
       CLIENT.update("@#{tweet.user.screen_name} #{lyrics}", in_reply_to_status_id: tweet.id)
     end
   end
