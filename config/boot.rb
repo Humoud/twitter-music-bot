@@ -24,13 +24,10 @@ Nrb.config.autoload_paths.each do |dir|
   Dir[File.join(dir, '*.rb')].each { |f| require(f) }
 end
 
-#################################################
-#### TODO: add to YML file
-## Twitter Handle and Creds
-# @RobotPawn
-# DeveloperAccount1!
+####################
+###### Twitter Auth
+#
 
-# Authenticate
 twitter_creds = YAML.load_file('config/twitter.yml')
 BOT_HANDLER = twitter_creds['bot_handler']
 

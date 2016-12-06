@@ -1,3 +1,9 @@
 # twitter-music-bot
 
-###### Generated with `nrb` v.1.2.0
+A twitter bot that searches for song names, artist names, and lyrics.
+
+## Architecture
+* SuckerPunch Worker
+* Twitter API
+* Twitter Steam API
+* Active Record

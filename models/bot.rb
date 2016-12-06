@@ -3,6 +3,8 @@
 #
 # User(id: integer, handle: string, twitter_user_id: integer, tweet_id: integer)
 
+## TODO set field `replied_to` of the tweets that the bot has replied to true
+
 require 'uri'
 require 'net/http'
 
