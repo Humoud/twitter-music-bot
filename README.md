@@ -1,4 +1,4 @@
-# twitter-music-bot
+# Twitter Music bot
 
 A twitter bot that searches for song names, artist names, and lyrics.
 It queries the `Chart Lyrics` API to do the music search.
