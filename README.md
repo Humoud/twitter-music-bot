@@ -14,13 +14,13 @@ It queries the `Chart Lyrics` API to do the music search.
 1. Create file `config/twitter.yml`.
 2. Enter your Twitter bot handle(@xyz), and Twitter API tokens and keys into `config/twitter.yml`:
 
-```
-bot_handler: '@account'
-consumer_key: 'xyz123'
-consumer_secret: 'xyz123'
-access_token: 'xyz123'
-access_token_secret: 'xyz123'
-```
+    ```
+    bot_handler: '@account'
+    consumer_key: 'xyz123'
+    consumer_secret: 'xyz123'
+    access_token: 'xyz123'
+    access_token_secret: 'xyz123'
+    ```
 
 3. start the app `bundle exec nrb start`.
 
