@@ -39,5 +39,12 @@ Methods:
 3. reply_to_mention_search_lyric: takes in lyrics, replies with the possible song names and artists in multiple tweets.
 
 
+## Docker
+Added a Dockerfile. Now you can run this in a docker container.
+run:
+1. `docker build -t twitter-bot .` to build the image
+2. `docker run -it twitter-bot` to run a container
+
+
 ## TODO
 1. Break up lyrics into multiple tweets and then send them.
