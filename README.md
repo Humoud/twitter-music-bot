@@ -41,7 +41,9 @@ Methods:
 
 ## Docker
 Added a Dockerfile. Now you can run this in a docker container.
+
 In the app root, run:
+
 1. build the image: `docker build -t twitter-bot .`
 2. run a container: `docker run -it twitter-bot`
 
